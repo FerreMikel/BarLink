@@ -26,6 +26,6 @@ hs_err_pid*
 
 # IntelliJ
 .idea/
-.iml
+*.iml
 out/
 >>>>>>> b07cdd1... Created Establishment, Zone, Table, Product, StockProduct classes and TableTest and ZoneTest testing units
