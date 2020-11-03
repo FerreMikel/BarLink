@@ -1,5 +1,7 @@
 package main.products;
 
+import exceptions.NegativeStockException;
+
 /**
  * Represents an inventory product, extends product
  *
@@ -66,7 +68,10 @@ public class StockProduct extends Product {
      *
      * @param amount quantity consumed
      */
-    public void consume(int amount) {
+    public void consume(int amount) throws NegativeStockException {
+        if (amount>this.amount) {
+            throw new NegativeStockException(this.amount);
+        }
         this.amount -= amount;
     }
 }
